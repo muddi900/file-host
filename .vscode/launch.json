@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Quart",
+      "type": "python",
+      "request": "launch",
+      "module": "quart",
+      "env": {
+        "QUART_APP": "app.py",
+        "QUART_ENV": "development",
+        "QUART_DEBUG": "0"
+      },
+      "args": ["run", "--no-reload"],
+      "jinja": true,
+      "subProcess": true
+    },
+    {
+      "name": "Python: Quart for macOS",
+      "type": "python",
+      "request": "launch",
+      "module": "quart",
+      "env": {
+        "QUART_APP": "app:app",
+        "QUART_ENV": "development",
+        "QUART_DEBUG": "0"
+      },
+      "args": ["run", "--no-reload", "-p", "5500"],
+      "jinja": true,
+      "subProcess": true
+    },
+    {
+      "name": "Python: Quart for macOS",
+      "type": "python",
+      "request": "launch",
+      "module": "hypercorn",
+      "args": ["app:app", "--debug", "--log-level", "DEBUG"],
+      "jinja": true,
+      "subProcess": true
+    }
+  ],
+  "compounds": []
+}

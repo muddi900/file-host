@@ -1,0 +1,5 @@
+type:color
+Gold 
+Rose Gold
+Gold
+Silver
